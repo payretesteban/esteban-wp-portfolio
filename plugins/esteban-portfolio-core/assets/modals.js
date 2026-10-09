@@ -198,19 +198,15 @@
 	}
 
 	const calLink = cfg.calLink;
-	const calTriggers = document.querySelectorAll( '.ep-cal-trigger a, [data-ep-book]' );
-	if ( calLink && calTriggers.length ) {
+	const calSelector = '.ep-cal-trigger a, [data-ep-book]';
+	if ( calLink && document.querySelector( calSelector ) ) {
 		const ns = 'ep-booking';
-		const config = JSON.stringify( { layout: 'month_view' } );
-		calTriggers.forEach( function ( el ) {
-			el.setAttribute( 'data-cal-link', calLink );
-			el.setAttribute( 'data-cal-namespace', ns );
-			el.setAttribute( 'data-cal-config', config );
-		} );
+		const embedSrc = 'https://app.cal.com/embed/embed.js';
+		let embedFailed = false;
 
 		// Cal.com embed loader (from Cal's docs), loads embed.js on demand.
 		/* eslint-disable */
-		( function ( C, A, L ) { let p = function ( a, ar ) { a.q.push( ar ); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if ( ! cal.loaded ) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild( d.createElement( 'script' ) ).src = A; cal.loaded = true; } if ( ar[ 0 ] === L ) { const api = function () { p( api, arguments ); }; const namespace = ar[ 1 ]; api.q = api.q || []; if ( typeof namespace === 'string' ) { cal.ns[ namespace ] = cal.ns[ namespace ] || api; p( cal.ns[ namespace ], ar ); p( cal, [ 'initNamespace', namespace ] ); } else p( cal, ar ); return; } p( cal, ar ); }; } )( window, 'https://app.cal.com/embed/embed.js', 'init' );
+		( function ( C, A, L ) { let p = function ( a, ar ) { a.q.push( ar ); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if ( ! cal.loaded ) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild( d.createElement( 'script' ) ).src = A; cal.loaded = true; } if ( ar[ 0 ] === L ) { const api = function () { p( api, arguments ); }; const namespace = ar[ 1 ]; api.q = api.q || []; if ( typeof namespace === 'string' ) { cal.ns[ namespace ] = cal.ns[ namespace ] || api; p( cal.ns[ namespace ], ar ); p( cal, [ 'initNamespace', namespace ] ); } else p( cal, ar ); return; } p( cal, ar ); }; } )( window, embedSrc, 'init' );
 		/* eslint-enable */
 
 		window.Cal( 'init', ns, { origin: 'https://cal.com' } );
@@ -224,9 +220,31 @@
 			},
 		} );
 
-		// The "book a call" link inside the contact modal closes it first.
-		document.querySelectorAll( '[data-ep-book]' ).forEach( function ( el ) {
-			el.addEventListener( 'click', closeContact );
+		// If the embed script can't load (blocked, offline), fall back to the Cal page in a new tab.
+		const embedScript = document.querySelector( 'script[src="' + embedSrc + '"]' );
+		if ( embedScript ) {
+			embedScript.addEventListener( 'error', function () {
+				embedFailed = true;
+			} );
+		}
+
+		// We open the modal ourselves (instead of data-cal-link) so we can stop the
+		// link's default navigation — otherwise the browser also follows the href to cal.com.
+		document.addEventListener( 'click', function ( e ) {
+			const trigger = e.target.closest( calSelector );
+			if ( ! trigger ) {
+				return;
+			}
+			e.preventDefault();
+			closeContact();
+			if ( embedFailed ) {
+				window.open( 'https://cal.com/' + calLink, '_blank', 'noopener' );
+				return;
+			}
+			window.Cal.ns[ ns ]( 'modal', {
+				calLink: calLink,
+				config: { layout: 'month_view', theme: isDarkBackground() ? 'dark' : 'light' },
+			} );
 		} );
 	}
 } )();
