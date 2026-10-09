@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "esteban/logo",
+	"version": "0.1.0",
+	"title": "EP Logo",
+	"category": "theme",
+	"icon": "editor-code",
+	"description": "Animated <EP/> logo with a blinking caret. Links to the home page.",
+	"textdomain": "esteban-portfolio",
+	"attributes": {
+		"text": { "type": "string", "default": "EP" },
+		"showCaret": { "type": "boolean", "default": true }
+	},
+	"supports": { "html": false, "multiple": true },
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

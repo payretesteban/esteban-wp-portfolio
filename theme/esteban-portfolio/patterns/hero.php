@@ -6,13 +6,13 @@
  * Inserter: true
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"820px","justifyContent":"left"}} -->
-<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--60)">
-<!-- wp:paragraph {"textColor":"accent","fontFamily":"mono","fontSize":"small"} -->
-<p class="has-accent-color has-text-color has-mono-font-family has-small-font-size">Hi, I’m</p>
+<!-- wp:group {"className":"ep-hero","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"820px","justifyContent":"left"}} -->
+<div class="wp-block-group ep-hero" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:paragraph {"className":"ep-status","fontFamily":"mono","fontSize":"small"} -->
+<p class="ep-status has-mono-font-family has-small-font-size">Open to leadership roles &amp; consulting</p>
 <!-- /wp:paragraph -->
-<!-- wp:heading {"level":1,"fontSize":"xx-large"} -->
-<h1 class="wp-block-heading has-xx-large-font-size">Esteban Payret</h1>
+<!-- wp:heading {"level":1,"className":"ep-gradient-text","fontSize":"xx-large"} -->
+<h1 class="wp-block-heading ep-gradient-text has-xx-large-font-size">Esteban Payret</h1>
 <!-- /wp:heading -->
 <!-- wp:heading {"level":2,"textColor":"muted","fontSize":"x-large"} -->
 <h2 class="wp-block-heading has-muted-color has-text-color has-x-large-font-size">Building Teams, Products &amp; Systems</h2>

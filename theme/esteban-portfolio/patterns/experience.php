@@ -13,9 +13,14 @@ $esteban_jobs = array(
 ?>
 <!-- wp:group {"anchor":"experience","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div id="experience" class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+<!-- wp:paragraph {"className":"ep-eyebrow"} -->
+<p class="ep-eyebrow">// experience</p>
+<!-- /wp:paragraph -->
 <!-- wp:heading {"fontSize":"x-large"} -->
 <h2 class="wp-block-heading has-x-large-font-size">Experience</h2>
 <!-- /wp:heading -->
+<!-- wp:group {"className":"ep-timeline","layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+<div class="wp-block-group ep-timeline">
 <?php foreach ( $esteban_jobs as $job ) : ?>
 <!-- wp:group {"className":"is-style-card","layout":{"type":"constrained","justifyContent":"left","contentSize":"100%"}} -->
 <div class="wp-block-group is-style-card">
@@ -35,5 +40,7 @@ $esteban_jobs = array(
 </div>
 <!-- /wp:group -->
 <?php endforeach; ?>
+</div>
+<!-- /wp:group -->
 </div>
 <!-- /wp:group -->

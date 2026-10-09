@@ -13,6 +13,10 @@ The WordPress version of my portfolio, alongside the [Next.js version](https://w
 | HTML **templates** and **template parts** (front page, page, project archive, single project, 404) | `theme/esteban-portfolio/templates`, `parts` |
 | PHP-registered **block patterns** (hero, about, experience timeline, featured projects, contact) | `theme/esteban-portfolio/patterns` |
 | Custom **block style** + `theme.json` style variation (“Card” group) | `functions.php`, `theme.json` |
+| Custom **block** with no build step: the animated `<EP/>` logo (block.json, server render, editor controls) | `theme/esteban-portfolio/blocks/logo` |
+| Global **style variation** “Daylight” (light theme matching estebanpayret.com), switchable in Appearance → Editor → Styles | `theme/esteban-portfolio/styles/daylight.json` |
+| Self-hosted **Geist / Geist Mono** variable fonts via `theme.json` `fontFace` | `theme/esteban-portfolio/assets/fonts` |
+| Sticky blurred header, hero glow, timeline, card hover and **CSS scroll-driven reveal animations** (no JS, respects reduced motion) | `theme/esteban-portfolio/assets/css/theme.css` |
 | **Content model in a plugin**: `project` post type, `tech` taxonomy, REST-exposed post meta | `plugins/esteban-portfolio-core` |
 | **Block Bindings API**: project role and URL rendered from post meta in the single-project template | `templates/single-project.html` |
 | **Query Loop** grids pulling the custom post type | `patterns/featured-projects.php`, `templates/archive-project.html` |

@@ -1,0 +1,52 @@
+/* <EP/> logo — mirrors the logo on estebanpayret.com. Colors come from theme.json custom tokens, so style variations can flip them. */
+.ep-logo {
+	display: inline-flex;
+	align-items: center;
+	border-radius: 8px;
+	text-decoration: none !important;
+}
+.ep-logo:focus-visible {
+	outline: 2px solid var(--wp--preset--color--accent);
+	outline-offset: 2px;
+}
+.ep-logo__chip {
+	display: inline-flex;
+	align-items: center;
+	height: 2rem;
+	padding: 0 0.5rem;
+	border-radius: 8px;
+	background: var(--wp--custom--logo--chip-background, #fff);
+	color: var(--wp--custom--logo--chip-text, #0f172a);
+	font-family: var(--wp--preset--font-family--mono, ui-monospace, monospace);
+	font-size: 0.8rem;
+	font-weight: 700;
+	line-height: 1;
+	box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+	transition: box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ep-logo:hover .ep-logo__chip {
+	box-shadow: 0 6px 18px -6px rgb(0 0 0 / 0.35);
+	transform: translateY(-1px);
+}
+.ep-logo__bracket {
+	display: inline-block;
+	color: var(--wp--custom--logo--bracket, #0284c7);
+	transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.ep-logo:hover .ep-logo__bracket--open { transform: translateX(-2px); }
+.ep-logo:hover .ep-logo__bracket--close { transform: translateX(2px); }
+.ep-logo__caret {
+	width: 2px;
+	height: 0.875rem;
+	margin-left: 2px;
+	border-radius: 999px;
+	background: var(--wp--custom--logo--caret, #10b981);
+	animation: ep-caret 1.1s step-end infinite;
+}
+@keyframes ep-caret {
+	50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.ep-logo__caret { animation: none; }
+	.ep-logo__bracket, .ep-logo__chip { transition: none; }
+}

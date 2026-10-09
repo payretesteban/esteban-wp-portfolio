@@ -8,8 +8,11 @@
 ?>
 <!-- wp:group {"anchor":"contact","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div id="contact" class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--70)">
-<!-- wp:group {"className":"is-style-card","layout":{"type":"constrained","contentSize":"640px"}} -->
-<div class="wp-block-group is-style-card">
+<!-- wp:group {"className":"is-style-card ep-reveal ep-contact","layout":{"type":"constrained","contentSize":"640px"}} -->
+<div class="wp-block-group is-style-card ep-reveal ep-contact">
+<!-- wp:paragraph {"align":"center","className":"ep-eyebrow"} -->
+<p class="has-text-align-center ep-eyebrow">// contact</p>
+<!-- /wp:paragraph -->
 <!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 <h2 class="wp-block-heading has-text-align-center has-x-large-font-size">Let’s talk</h2>
 <!-- /wp:heading -->

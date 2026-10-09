@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Daylight",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "base",
+					"name": "Base",
+					"color": "#ffffff"
+				},
+				{
+					"slug": "surface",
+					"name": "Surface",
+					"color": "#f0f9ff"
+				},
+				{
+					"slug": "border",
+					"name": "Border",
+					"color": "#e2e8f0"
+				},
+				{
+					"slug": "contrast",
+					"name": "Contrast",
+					"color": "#171717"
+				},
+				{
+					"slug": "muted",
+					"name": "Muted",
+					"color": "#475569"
+				},
+				{
+					"slug": "accent",
+					"name": "Accent (sky)",
+					"color": "#0284c7"
+				},
+				{
+					"slug": "accent-2",
+					"name": "Accent 2 (emerald)",
+					"color": "#059669"
+				}
+			]
+		},
+		"custom": {
+			"logo": {
+				"chipBackground": "#0f172a",
+				"chipText": "#ffffff",
+				"bracket": "#38bdf8",
+				"caret": "#34d399"
+			}
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--contrast)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--accent)",
+						"text": "#ffffff"
+					}
+				}
+			}
+		}
+	}
+}

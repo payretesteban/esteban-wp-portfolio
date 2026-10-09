@@ -10,9 +10,16 @@
 <div id="projects" class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
 <div class="wp-block-group">
+<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0"}}} -->
+<div class="wp-block-group">
+<!-- wp:paragraph {"className":"ep-eyebrow"} -->
+<p class="ep-eyebrow">// projects</p>
+<!-- /wp:paragraph -->
 <!-- wp:heading {"fontSize":"x-large"} -->
 <h2 class="wp-block-heading has-x-large-font-size">Featured projects</h2>
 <!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size"><a href="/projects/">All projects →</a></p>
 <!-- /wp:paragraph -->

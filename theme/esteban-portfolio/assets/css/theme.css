@@ -1,0 +1,243 @@
+/*
+ * Esteban Portfolio — extra styling that theme.json can't express:
+ * sticky header, hero glow, status pill, card hover, timeline,
+ * scroll-driven reveal animations. All motion respects prefers-reduced-motion.
+ */
+
+::selection {
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--base);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* ---------- Header ---------- */
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: color-mix(in srgb, var(--wp--preset--color--base) 78%, transparent);
+	-webkit-backdrop-filter: saturate(180%) blur(12px);
+	backdrop-filter: saturate(180%) blur(12px);
+}
+.admin-bar .site-header { top: 32px; }
+@media (max-width: 782px) { .admin-bar .site-header { top: 46px; } }
+
+.site-header .wp-block-navigation-item__content {
+	position: relative;
+	color: var(--wp--preset--color--muted);
+	transition: color 0.15s ease;
+}
+.site-header .wp-block-navigation-item__content:hover {
+	color: var(--wp--preset--color--contrast);
+	text-decoration: none;
+}
+.site-header .wp-block-navigation-item__content::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -4px;
+	height: 2px;
+	border-radius: 2px;
+	background: linear-gradient(90deg, var(--wp--preset--color--accent), var(--wp--preset--color--accent-2));
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.site-header .wp-block-navigation-item__content:hover::after { transform: scaleX(1); }
+
+/* ---------- Hero ---------- */
+.ep-hero { position: relative; isolation: isolate; }
+.ep-hero::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: -10%;
+	right: -10%;
+	width: min(620px, 90vw);
+	aspect-ratio: 1;
+	background:
+		radial-gradient(circle at 35% 40%, color-mix(in srgb, var(--wp--preset--color--accent) 30%, transparent), transparent 60%),
+		radial-gradient(circle at 70% 70%, color-mix(in srgb, var(--wp--preset--color--accent-2) 20%, transparent), transparent 55%);
+	filter: blur(24px);
+	pointer-events: none;
+}
+/* Subtle dot grid behind the hero */
+.ep-hero::after {
+	content: "";
+	position: absolute;
+	z-index: -2;
+	inset: 0 -50vw;
+	background-image: radial-gradient(color-mix(in srgb, var(--wp--preset--color--contrast) 12%, transparent) 1px, transparent 1px);
+	background-size: 22px 22px;
+	-webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, #000 30%, transparent 75%);
+	mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, #000 30%, transparent 75%);
+	pointer-events: none;
+}
+
+.ep-gradient-text {
+	background: linear-gradient(90deg, var(--wp--preset--color--contrast) 0%, var(--wp--preset--color--contrast) 40%, var(--wp--preset--color--accent) 70%, var(--wp--preset--color--accent-2) 100%);
+	background-size: 200% auto;
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: ep-shine 9s ease-in-out infinite;
+}
+@keyframes ep-shine {
+	0%, 100% { background-position: 0% center; }
+	50% { background-position: 100% center; }
+}
+
+/* "Open to new roles" pill with a pulsing dot */
+.ep-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	width: fit-content;
+	padding: 0.3rem 0.8rem;
+	border: 1px solid var(--wp--preset--color--border);
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	background: color-mix(in srgb, var(--wp--preset--color--surface) 80%, transparent);
+	color: var(--wp--preset--color--muted);
+}
+.ep-status::before {
+	content: "";
+	flex: none;
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background: var(--wp--preset--color--accent-2);
+	animation: ep-pulse 2.2s ease-out infinite;
+}
+@keyframes ep-pulse {
+	0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--wp--preset--color--accent-2) 60%, transparent); }
+	80%, 100% { box-shadow: 0 0 0 8px transparent; }
+}
+
+/* Mono "code comment" eyebrows above section headings */
+.ep-eyebrow {
+	margin-bottom: 0.25rem !important;
+	color: var(--wp--preset--color--accent);
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--small);
+	letter-spacing: 0.02em;
+}
+
+/* ---------- Buttons ---------- */
+.wp-element-button,
+.wp-block-button__link {
+	transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+.wp-block-button__link:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 8px 20px -8px color-mix(in srgb, var(--wp--preset--color--accent) 60%, transparent);
+}
+.wp-block-button.is-style-outline > .wp-block-button__link {
+	border-color: var(--wp--preset--color--border);
+	background: transparent;
+}
+.wp-block-button.is-style-outline > .wp-block-button__link:hover {
+	border-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent);
+	box-shadow: none;
+}
+
+/* ---------- Cards ---------- */
+.is-style-card {
+	position: relative;
+	transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.wp-block-post-template .is-style-card:hover,
+.ep-timeline > .is-style-card:hover {
+	transform: translateY(-3px);
+	border-color: color-mix(in srgb, var(--wp--preset--color--accent) 55%, var(--wp--preset--color--border));
+	box-shadow: 0 16px 40px -18px color-mix(in srgb, var(--wp--preset--color--accent) 45%, transparent);
+}
+/* Make the whole project card clickable via its title link */
+.wp-block-post-template .is-style-card .wp-block-post-title a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+}
+.wp-block-post-template .is-style-card .wp-block-post-title a { color: var(--wp--preset--color--contrast); }
+.wp-block-post-template .is-style-card:hover .wp-block-post-title a { color: var(--wp--preset--color--accent); text-decoration: none; }
+.wp-block-post-terms a {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	padding: 0.1rem 0.5rem;
+	border-radius: var(--wp--custom--radius--pill, 999px);
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 12%, transparent);
+	color: var(--wp--preset--color--accent);
+}
+.wp-block-post-terms a:hover { text-decoration: none; background: color-mix(in srgb, var(--wp--preset--color--accent) 22%, transparent); }
+.wp-block-post-terms .wp-block-post-terms__separator { display: none; }
+.wp-block-post-terms { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+/* ---------- Experience timeline ---------- */
+.ep-timeline {
+	position: relative;
+	padding-left: 1.75rem;
+	border-left: 2px solid var(--wp--preset--color--border);
+}
+.ep-timeline > .is-style-card::before {
+	content: "";
+	position: absolute;
+	top: 1.9rem;
+	left: calc(-1.75rem - 9px);
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--wp--preset--color--base);
+	border: 2px solid var(--wp--preset--color--accent);
+}
+.ep-timeline > .is-style-card:first-child::before {
+	background: var(--wp--preset--color--accent-2);
+	border-color: var(--wp--preset--color--accent-2);
+	box-shadow: 0 0 0 4px color-mix(in srgb, var(--wp--preset--color--accent-2) 25%, transparent);
+}
+
+/* ---------- Motion ---------- */
+@keyframes ep-fade-up {
+	from { opacity: 0; transform: translateY(14px); }
+	to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+	/* Hero content staggers in on load */
+	.ep-hero > * { animation: ep-fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+	.ep-hero > *:nth-child(2) { animation-delay: 0.06s; }
+	.ep-hero > *:nth-child(3) { animation-delay: 0.12s; }
+	.ep-hero > *:nth-child(4) { animation-delay: 0.18s; }
+	.ep-hero > *:nth-child(5) { animation-delay: 0.24s; }
+
+	/* Sections and cards reveal on scroll (CSS scroll-driven animations; no JS) */
+	@supports (animation-timeline: view()) {
+		.ep-reveal,
+		.ep-timeline > .is-style-card,
+		.wp-block-post-template > li {
+			animation: ep-fade-up linear both;
+			animation-timeline: view();
+			animation-range: entry 0% cover 22%;
+		}
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	html { scroll-behavior: auto; }
+	.ep-gradient-text, .ep-status::before { animation: none; }
+	.is-style-card, .wp-block-button__link { transition: none; }
+}
+
+/* Keep the editor calm: no reveal animations while editing */
+.editor-styles-wrapper .ep-reveal,
+.editor-styles-wrapper .ep-hero > *,
+.editor-styles-wrapper .wp-block-post-template > li { animation: none !important; }
+
+/* Contact card: soft gradient border glow */
+.ep-contact {
+	background:
+		radial-gradient(120% 120% at 50% 0%, color-mix(in srgb, var(--wp--preset--color--accent) 14%, transparent), transparent 60%),
+		var(--wp--preset--color--surface) !important;
+}
