@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+	<title>Esteban Payret</title>
+	<link>https://playground.wordpress.net</link>
+	<description>Portfolio content (starter). Replace with a real export from LocalWP: Tools → Export → Projects.</description>
+	<language>en-US</language>
+	<wp:wxr_version>1.2</wp:wxr_version>
+	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[admin]]></wp:author_login><wp:author_display_name><![CDATA[Esteban Payret]]></wp:author_display_name></wp:author>
+
+	<wp:term><wp:term_id>10</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>nextjs</wp:term_slug><wp:term_name><![CDATA[Next.js]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>11</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>hubspot</wp:term_slug><wp:term_name><![CDATA[HubSpot CMS]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>12</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>wordpress</wp:term_slug><wp:term_name><![CDATA[WordPress]]></wp:term_name></wp:term>
+
+	<wp:term><wp:term_id>13</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>typescript</wp:term_slug><wp:term_name><![CDATA[TypeScript]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>14</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>ai</wp:term_slug><wp:term_name><![CDATA[AI / Gemini API]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>15</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>performance</wp:term_slug><wp:term_name><![CDATA[Performance]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>16</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>testing</wp:term_slug><wp:term_name><![CDATA[Testing]]></wp:term_name></wp:term>
+	<wp:term><wp:term_id>17</wp:term_id><wp:term_taxonomy>tech</wp:term_taxonomy><wp:term_slug>svg</wp:term_slug><wp:term_name><![CDATA[SVG]]></wp:term_name></wp:term>
+
+	<item>
+		<title><![CDATA[Portfolio — Next.js on Vercel]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>The primary version of my personal site, built with Next.js, Sanity, TypeScript and Tailwind CSS, deployed on Vercel.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[My main portfolio site, built with Next.js and deployed on Vercel.]]></excerpt:encoded>
+		<wp:post_id>101</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-01 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[nextjs-portfolio]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="nextjs"><![CDATA[Next.js]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Portfolio — HubSpot CMS version]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>The same portfolio rebuilt on HubSpot CMS to practice its themes, modules and drag-and-drop editing.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[The same portfolio rebuilt on HubSpot CMS.]]></excerpt:encoded>
+		<wp:post_id>102</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-02 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[hubspot-portfolio]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="hubspot"><![CDATA[HubSpot CMS]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://247631214.hs-sites-na2.com/esteban-payret-tech-lead-people-manager-hubspot-version]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Portfolio — WordPress block theme]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>This site: a custom block theme (theme.json, templates, patterns), a small plugin with a Project post type and block bindings, and a Playground Blueprint that builds the whole demo from GitHub.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[This site — a custom block theme plus a content-model plugin, deployed via WordPress Playground.]]></excerpt:encoded>
+		<wp:post_id>103</wp:post_id>
+		<wp:post_date><![CDATA[2026-10-03 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[wordpress-portfolio]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="wordpress"><![CDATA[WordPress]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://github.com/payretesteban/esteban-wp-portfolio]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[The Deep Drop]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A text adventure with its own parser and scoring engine.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Part of “The Lab” on my main site.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A text adventure with its own parser and scoring engine.]]></excerpt:encoded>
+		<wp:post_id>104</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-20 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[the-deep-drop]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="typescript"><![CDATA[TypeScript]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Lab experiment · design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[AI Cost Case]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A demo company’s AI agents redesigned for lower cost — a 92% token reduction, visualized with an SVG cost model.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Part of “The Lab” on my main site.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[A demo company’s AI agents redesigned for lower cost — a 92% token reduction, visualized with an SVG cost model.]]></excerpt:encoded>
+		<wp:post_id>105</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-21 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[ai-cost-case]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="ai"><![CDATA[AI / Gemini API]]></category>
+		<category domain="tech" nicename="svg"><![CDATA[SVG]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Lab experiment · design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Performance]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Live Google Lighthouse audits of the site via the PageSpeed API, with caching.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Part of “The Lab” on my main site.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Live Google Lighthouse audits of the site via the PageSpeed API, with caching.]]></excerpt:encoded>
+		<wp:post_id>106</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-22 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[performance]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="performance"><![CDATA[Performance]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Lab experiment · design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Tests]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>The site’s Vitest test suite and coverage, explained in plain language.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Part of “The Lab” on my main site.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[The site’s Vitest test suite and coverage, explained in plain language.]]></excerpt:encoded>
+		<wp:post_id>107</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-23 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[tests]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="testing"><![CDATA[Testing]]></category>
+		<category domain="tech" nicename="typescript"><![CDATA[TypeScript]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Lab experiment · design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Read & Listen (Beta)]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>AI-written texts in two languages, read aloud from A1 to C2 using the Gemini API and Web Speech API.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Part of “The Lab” on my main site.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[AI-written texts in two languages, read aloud from A1 to C2 using the Gemini API and Web Speech API.]]></excerpt:encoded>
+		<wp:post_id>108</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-24 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[read-and-listen]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="ai"><![CDATA[AI / Gemini API]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Lab experiment · design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+
+	<item>
+		<title><![CDATA[Scope (Beta)]]></title>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Seven questions in, a rough estimate of size, timeline, phases and risks out — a rule engine plus the Gemini API.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Part of “The Lab” on my main site.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+		<excerpt:encoded><![CDATA[Seven questions in, a rough estimate of size, timeline, phases and risks out — a rule engine plus the Gemini API.]]></excerpt:encoded>
+		<wp:post_id>109</wp:post_id>
+		<wp:post_date><![CDATA[2026-09-25 10:00:00]]></wp:post_date>
+		<wp:post_name><![CDATA[scope]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_type><![CDATA[project]]></wp:post_type>
+		<category domain="tech" nicename="ai"><![CDATA[AI / Gemini API]]></category>
+		<wp:postmeta><wp:meta_key><![CDATA[project_role]]></wp:meta_key><wp:meta_value><![CDATA[Lab experiment · design & development]]></wp:meta_value></wp:postmeta>
+		<wp:postmeta><wp:meta_key><![CDATA[project_url]]></wp:meta_key><wp:meta_value><![CDATA[https://www.estebanpayret.com/]]></wp:meta_value></wp:postmeta>
+	</item>
+</channel>
+</rss>

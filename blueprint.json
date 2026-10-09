@@ -1,0 +1,54 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Esteban Payret — WordPress portfolio",
+		"description": "Installs the Esteban Portfolio block theme and content plugin from GitHub and imports demo content.",
+		"author": "payretesteban"
+	},
+	"landingPage": "/",
+	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"features": { "networking": true },
+	"login": true,
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/payretesteban/esteban-wp-portfolio",
+				"ref": "main",
+				"refType": "branch",
+				"path": "plugins/esteban-portfolio-core"
+			},
+			"options": { "activate": true }
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "git:directory",
+				"url": "https://github.com/payretesteban/esteban-wp-portfolio",
+				"ref": "main",
+				"refType": "branch",
+				"path": "theme/esteban-portfolio"
+			},
+			"options": { "activate": true }
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Esteban Payret",
+				"blogdescription": "Tech Lead & People Manager — WordPress version"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/payretesteban/esteban-wp-portfolio/main/content/content.xml"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); flush_rewrite_rules(); ?>"
+		}
+	]
+}
