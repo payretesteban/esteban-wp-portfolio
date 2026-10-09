@@ -20,18 +20,17 @@
 <p class="has-text-align-center has-muted-color has-text-color">Open to engineering leadership roles, consulting and freelance projects. The first 30-minute call is free.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://cal.com/estebanpayret/30min">Book a free consultation</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"className":"ep-contact-trigger"} -->
+<div class="wp-block-button ep-contact-trigger"><a class="wp-block-button__link wp-element-button" href="#contact-form">Send me a message</a></div>
+<!-- /wp:button -->
+<!-- wp:button {"className":"is-style-outline ep-cal-trigger","textColor":"contrast"} -->
+<div class="wp-block-button is-style-outline ep-cal-trigger"><a class="wp-block-button__link has-contrast-color has-text-color wp-element-button" href="https://cal.com/estebanpayret/30min">Book a free consultation</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
-<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-<p class="has-text-align-center has-small-font-size"><a href="mailto:me@estebanpayret.com">me@estebanpayret.com</a></p>
-<!-- /wp:paragraph -->
 <!-- wp:social-links {"iconColor":"contrast","iconColorValue":"#e8eaf0","className":"is-style-logos-only","layout":{"type":"flex","justifyContent":"center"}} -->
 <ul class="wp-block-social-links has-icon-color is-style-logos-only">
 <!-- wp:social-link {"url":"https://www.linkedin.com/in/esteban-payret/","service":"linkedin"} /-->
 <!-- wp:social-link {"url":"https://github.com/payretesteban","service":"github"} /-->
-<!-- wp:social-link {"url":"mailto:me@estebanpayret.com","service":"mail"} /-->
 <!-- wp:social-link {"url":"https://www.estebanpayret.com/","service":"chain","label":"Main site"} /-->
 </ul>
 <!-- /wp:social-links -->

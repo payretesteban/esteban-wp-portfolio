@@ -18,6 +18,8 @@ The WordPress version of my portfolio, alongside the [Next.js version](https://w
 | Self-hosted **Geist / Geist Mono** variable fonts via `theme.json` `fontFace` | `theme/esteban-portfolio/assets/fonts` |
 | Sticky blurred header, hero glow, timeline, card hover and **CSS scroll-driven reveal animations** (no JS, respects reduced motion) | `theme/esteban-portfolio/assets/css/theme.css` |
 | **Content model in a plugin**: `project` post type, `tech` taxonomy, REST-exposed post meta | `plugins/esteban-portfolio-core` |
+| **Contact form modal** (native `<dialog>`, accessible tabs, client + server validation) posting to a custom **REST API** endpoint; spam protection via honeypot, signed timing token and rate limiting; messages stored in wp-admin → Messages and emailed to the admin. No email address in the markup. | `plugins/esteban-portfolio-core/includes/contact.php`, `includes/modals.php`, `assets/` |
+| **Cal.com booking modal** via the official embed, themed to match | `plugins/esteban-portfolio-core/assets/modals.js` |
 | **Block Bindings API**: project role and URL rendered from post meta in the single-project template | `templates/single-project.html` |
 | **Query Loop** grids pulling the custom post type | `patterns/featured-projects.php`, `templates/archive-project.html` |
 | Reproducible demo via a **Playground Blueprint** that installs from this repo | `blueprint.json` |
@@ -50,6 +52,11 @@ Commit and push to `main` (GitHub Desktop or `git push`). The Live demo link alw
 4. Edit content in WordPress. When you’re happy, **Tools → Export → Projects**, save over `content/content.xml`, commit and push — the demo link picks it up automatically.
 
 > Design changes made in the Site Editor are stored in the database, not in files. To keep them, copy them back into the theme (or use the [Create Block Theme](https://wordpress.org/plugins/create-block-theme/) plugin → “Save changes to theme”) before committing.
+
+## Contact form notes
+
+- Any link to `#contact-form`, or a Button block with the CSS class `ep-contact-trigger`, opens the contact modal. A Button block with the class `ep-cal-trigger` opens the Cal.com booking modal.
+- In the Playground demo, messages are saved to **wp-admin → Messages** of that visitor's temporary copy, and email doesn't go out. That's fine for showing the feature. On a real host, configure SMTP and use the `esteban_contact_received` action to forward messages anywhere.
 
 ## Images
 

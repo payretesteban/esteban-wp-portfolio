@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Esteban Portfolio Core
- * Description: Content model for the portfolio: a "Project" post type, a "Tech" taxonomy and REST-exposed custom fields used by block bindings. Kept in a plugin (not the theme) so content survives a theme switch.
- * Version: 0.1.0
+ * Description: Portfolio functionality: "Project" post type, "Tech" taxonomy, REST-exposed fields for block bindings, a spam-protected contact form (REST API + modal) and a Cal.com booking modal. Kept in a plugin so it survives a theme switch.
+ * Version: 0.2.0
  * Requires at least: 6.6
  * Requires PHP: 8.0
  * Author: Esteban Payret
@@ -15,6 +15,12 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+
+define( 'ESTEBAN_PORTFOLIO_CORE_VERSION', '0.2.0' );
+define( 'ESTEBAN_PORTFOLIO_CORE_FILE', __FILE__ );
+
+require_once __DIR__ . '/includes/contact.php';
+require_once __DIR__ . '/includes/modals.php';
 
 add_action( 'init', 'esteban_portfolio_register_content_model' );
 

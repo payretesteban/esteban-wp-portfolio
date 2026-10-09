@@ -25,8 +25,8 @@
 <!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/projects/">See projects</a></div>
 <!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline","textColor":"contrast"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-contrast-color has-text-color wp-element-button" href="https://cal.com/estebanpayret/30min">Book a free 30-min call</a></div>
+<!-- wp:button {"className":"is-style-outline ep-cal-trigger","textColor":"contrast"} -->
+<div class="wp-block-button is-style-outline ep-cal-trigger"><a class="wp-block-button__link has-contrast-color has-text-color wp-element-button" href="https://cal.com/estebanpayret/30min">Book a free 30-min call</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
